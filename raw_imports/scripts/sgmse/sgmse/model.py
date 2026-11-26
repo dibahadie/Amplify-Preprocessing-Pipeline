@@ -9,11 +9,11 @@ from torchaudio import load
 from torch_ema import ExponentialMovingAverage
 from librosa import resample
 
-from sgmse import sampling
-from sgmse.sdes import SDERegistry
-from sgmse.backbones import BackboneRegistry
-from sgmse.util.inference import evaluate_model
-from sgmse.util.other import pad_spec, si_sdr
+from sgmse.sgmse import sampling
+from sgmse.sgmse.sdes import SDERegistry
+from sgmse.sgmse.backbones import BackboneRegistry
+from sgmse.sgmse.util.inference import evaluate_model
+from sgmse.sgmse.util.other import pad_spec, si_sdr
 from pesq import pesq
 from pystoi import stoi
 from torch_pesq import PesqLoss

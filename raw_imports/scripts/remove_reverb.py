@@ -62,7 +62,7 @@ if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument("--input_dir", type=str, default="split_files/Amplify", help='Base directory containing the input data (3 levels deep)')
     parser.add_argument("--output_dir", type=str, default="split_files/Amplify", help='Base directory for the enhanced data')
-    parser.add_argument("--ckpt", type=str, default="sgmse/sgmse_artificial_rir_350k_2.ckpt", help='Path to model checkpoint')
+    parser.add_argument("--ckpt", type=str, default="scripts/sgmse/sgmse_artificial_rir_350k_2.ckpt", help='Path to model checkpoint')
     parser.add_argument("--sampler_type", type=str, default="pc", help="Sampler type for the PC sampler.")
     parser.add_argument("--corrector", type=str, choices=("ald", "langevin", "none"), default="ald", help="Corrector class for the PC sampler.")
     parser.add_argument("--corrector_steps", type=int, default=1, help="Number of corrector steps")
@@ -105,21 +105,21 @@ if __name__ == '__main__':
     output_base = Path(args.output_dir)
 
     # Search 3 levels deep: InputPath/Language/Gender/SongDir/
-    song_dirs = [d for d in input_base.glob('*/*/*') if d.is_dir()]
+    song_dirs = [d for d in input_base.glob('*/*') if d.is_dir()]
 
     if not song_dirs:
-        print(f"No subdirectories found 3 levels deep in {args.input_dir}.")
-        print(f"Expected structure: {args.input_dir}/<Language>/<Gender>/<SongDir>/")
+        print(f"No subdirectories found 2 levels deep in {args.input_dir}.")
+        print(f"Expected structure: {args.input_dir}<Gender>/<SongDir>/")
         exit(1)
 
     for song_dir in song_dirs:
         # Reconstruct paths
         parts = song_dir.relative_to(input_base).parts
-        if len(parts) != 3:
+        if len(parts) != 2:
             continue
             
-        language, gender, song_id = parts
-        current_out_dir = output_base / language / gender / song_id
+        gender, song_id = parts
+        current_out_dir = output_base / gender / song_id
         print(current_out_dir)
         
         # Get audio files (flac and wav)

@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: sgmse
+Version: 0.1.0
+Summary: Score-based Generative Models for Speech Enhancement and Dereverberation
+Author: Simon Welker, Julius Richter, Timo Gerkmann
+Project-URL: Homepage, https://github.com/sp-uhh/sgmse
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: gdown
+Requires-Dist: h5py
+Requires-Dist: ipympl
+Requires-Dist: librosa
+Requires-Dist: ninja
+Requires-Dist: numpy<2.0
+Requires-Dist: pandas
+Requires-Dist: pesq
+Requires-Dist: Pillow
+Requires-Dist: protobuf
+Requires-Dist: pyarrow
+Requires-Dist: pyroomacoustics
+Requires-Dist: pystoi
+Requires-Dist: pytorch-lightning
+Requires-Dist: scipy
+Requires-Dist: sdeint
+Requires-Dist: setuptools
+Requires-Dist: seaborn
+Requires-Dist: torch
+Requires-Dist: torch-ema
+Requires-Dist: torch-pesq
+Requires-Dist: torchaudio
+Requires-Dist: torchvision
+Requires-Dist: torchinfo
+Requires-Dist: torchsde
+Requires-Dist: tqdm
+Requires-Dist: wandb

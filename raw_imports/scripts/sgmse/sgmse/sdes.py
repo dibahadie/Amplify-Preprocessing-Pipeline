@@ -7,10 +7,10 @@ import abc
 import warnings
 
 import numpy as np
-from sgmse.util.tensors import batch_broadcast
+from sgmse.sgmse.util.tensors import batch_broadcast
 import torch
 
-from sgmse.util.registry import Registry
+from sgmse.sgmse.util.registry import Registry
 
 
 SDERegistry = Registry("SDE")

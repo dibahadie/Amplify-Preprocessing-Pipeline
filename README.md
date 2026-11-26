@@ -90,7 +90,9 @@ python rename_duplicate_ids.py --root Amplify
 Download the pretrained checkpoints and run using the following.
 
 ```
-curl -L "https://www2.informatik.uni-hamburg.de/sp/audio/publications/itg2025-reverbfx/checkpoints/sgmse_artificial_rir_350k.ckpt" -o scripts/sgmse_artificial_rir_350k_2.ckpt
+curl -L "https://www2.informatik.uni-hamburg.de/sp/audio/publications/itg2025-reverbfx/checkpoints/sgmse_artificial_rir_350k.ckpt" -o scripts/sgmse/sgmse_artificial_rir_350k_2.ckpt
+source scripts/sgmse/env/bin/activate
+pip install -e scripts/sgmse
 python_gpu_lock -- python scripts/remove_reverb.py
 ```
 
