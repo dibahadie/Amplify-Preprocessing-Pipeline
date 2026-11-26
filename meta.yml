@@ -1,0 +1,15 @@
+# Resample all audio files to a fixed sample rate
+# (consumed in as_pysrc.fileio.speechdb.agamemnon.cp_from_yaml)
+samplerate: 24000        # in Hz (null -> no resampling)
+
+# Remove silence before and after utterance such that only a frame of silence
+# of `max_silence_frame` before and after the utterance remains in the file.
+# (consumed in as_pysrc.fileio.speechdb.agamemnon.audio)
+# max_silence_frame: null      # in seconds (null -> silence is not removed)
+
+# Split utterances that are longer than `cut_files_duration_threshold` at
+# silences that a at least `cut_files_silence_gap` long. 
+# (consumed in as_pysrc.fileio.speechdb.agamemnon.audio)
+#cut_files_duration_threshold: null # in seconds (null -> files are never split)
+#cut_files_silence_gap: 0.3         # in seconds (not used if max_lenght=null)
+min_source_duration_s: 1

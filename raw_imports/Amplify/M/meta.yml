@@ -1,0 +1,12 @@
+speaker: "{song_id}"
+
+source:
+  - "music/Amplify/MusicSeparationData_Flac/DATA/Tency/*/multi/9220_*.flac"
+
+speaker_pattern: ".*\/(?P<singer_name>[^/]+)_(?P<song_name>[^/]+)_(?P<song_id>[0-9]+)\/multi\/9220_(?P<stem_name>[^\/]+).flac"
+# text_source: "/data2/anasynth_nonbp/hadi/work/Amplify/English/F/{song_id}/auto_txt/{segment_number}.txt"
+
+# mixed
+language: English
+gender: male
+voice: singing

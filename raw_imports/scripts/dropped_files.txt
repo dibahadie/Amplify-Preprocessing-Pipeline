@@ -1,0 +1,9 @@
+Arabic
+Chinese
+Latin
+Nynorsk
+Polish
+Russian
+Tamil
+Vietnamese
+Welsh

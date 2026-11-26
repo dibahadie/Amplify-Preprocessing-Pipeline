@@ -1,0 +1,18 @@
+# The : is used to show a long vowel and we don't need it since the duration is seperately provided
+phoneme_map u:=u
+phoneme_map o:=o
+phoneme_map 3:=3
+phoneme_map 6:=6
+phoneme_map @:=@
+phoneme_map @\\:=@\\
+phoneme_map A:=A
+phoneme_map E:=E
+phoneme_map I:=I
+phoneme_map I\\:=I\\
+phoneme_map O:=O
+phoneme_map U:=U
+phoneme_map V:=V
+phoneme_map a:=a
+phoneme_map e:=e
+phoneme_map i:=i
+phoneme_map {:={
